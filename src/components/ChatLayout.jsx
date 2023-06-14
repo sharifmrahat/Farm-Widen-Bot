@@ -107,37 +107,35 @@ function ChatLayout() {
   }
 
   return (
-    <div className="m-4 lg:m-8">
-      <div className="h-[60vh] lg:h-[90vh] w-full">
-        <MainContainer>
-          <ChatContainer>
-            <MessageInput
-              placeholder="Type message here"
-              onSend={handleSend}
-              attachButton={false}
-            />
-            <MessageList
-              className="p-1 lg:p-2"
-              scrollBehavior="smooth"
-              typingIndicator={
-                isTyping ? (
-                  <TypingIndicator content="Farm Widen BOT is typing" />
-                ) : null
-              }
-            >
-              {messages.map((message, i) => {
-                return (
-                  <Message
-                    style={{ marginBottom: "12px" }}
-                    key={i}
-                    model={message}
-                  />
-                );
-              })}
-            </MessageList>
-          </ChatContainer>
-        </MainContainer>
-      </div>
+    <div className="h-[55vh] lg:h-[90vh] w-full">
+      <MainContainer>
+        <ChatContainer>
+          <MessageInput
+            placeholder="Type message here"
+            onSend={handleSend}
+            attachButton={false}
+          />
+          <MessageList
+            className="p-1 lg:p-2"
+            scrollBehavior="smooth"
+            typingIndicator={
+              isTyping ? (
+                <TypingIndicator content="Farm Widen BOT is typing" />
+              ) : null
+            }
+          >
+            {messages.map((message, i) => {
+              return (
+                <Message
+                  style={{ marginBottom: "12px" }}
+                  key={i}
+                  model={message}
+                />
+              );
+            })}
+          </MessageList>
+        </ChatContainer>
+      </MainContainer>
     </div>
   );
 }

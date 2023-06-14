@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <main
-        className={`flex flex-col justify-center lg:grid lg:grid-cols-2 lg:justify-between bg-[#f1e1dd] ${montserrat.className}`}
+        className={`lg:grid lg:grid-cols-2 lg:items-center ${montserrat.className} h-screen bg-[#f1e1dd] px-4`}
       >
         <section>
           <Menubar />
